@@ -6,10 +6,18 @@
     <title>test</title>
 </head>
 <body>
+    <input type="text" id="nomor"/>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io()
-        
+        socket.on(
+            document.getElementById("nomor").value || "man",
+            ($) => {
+                $ = JSON.parse($)
+                console.log($)
+
+            }
+        )
     </script>
 </body>
 </html>
