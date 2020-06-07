@@ -2,7 +2,7 @@ const express = require("express")
 const mongodb = require("mongodb")
 const server = express()
 const http = require("http").createServer(server)
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 const health = require("express-ping")
 const io = require("socket.io")(http)
 const bp = require("body-parser")
@@ -65,6 +65,12 @@ client.connect(err => {
     (socket) => {
       numberOfConnectedClient++
       socket.on(
+        "test",
+        () => {
+          console.log(gottt)
+        }
+      )
+      socket.on(
         "disconnect",
         () => {
           numberOfConnectedClient--
@@ -111,6 +117,7 @@ client.connect(err => {
       socket.on(
         "store this chat please",
         ($, onError) => {
+          console.log("got msg")
           if ($.type == "array") {
             collection.insertMany($.data)
           }
