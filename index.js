@@ -103,6 +103,7 @@ client.connect(err => {
         console.log(realToken.join(""))
         if(passedToken !== realToken.join("")){
           response.send("Wrong Query")
+          console.log(time.join(""))
         }else{
           client.db("slime").collection("coins").updateOne({username:nomor}, {$inc:{coins:1}})
           response.send("ok")
