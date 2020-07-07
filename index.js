@@ -93,7 +93,8 @@ client.connect(err => {
         const chara = test(char)
         console.log(chara)
         const d = new Date()
-        let time = ""+d.getFullYear()+d.getMonth()+d.getDate()+d.getHours()+d.getSeconds()
+        
+        let time = ""+d.getFullYear()+d.getMonth()+d.getDate()+d.getHours()+d.getMinutes()
         console.log(time)
         time = time.split("")
         const realToken = []
