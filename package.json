@@ -9,7 +9,7 @@
     "express": "^4.17.1",
     "express-ping": "^1.4.0",
     "mongodb": "^3.5.8",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "realm": "^6.0.2",
     "socket.io": "^2.3.0"
   },
